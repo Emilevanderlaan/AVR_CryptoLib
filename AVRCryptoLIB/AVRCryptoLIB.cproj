@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{31dd0d44-4701-4dc6-a050-341e3de6cf61}</ProjectGuid>
+    <avrdevice>ATmega640</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>StaticLibrary</OutputType>
+    <Language>C</Language>
+    <OutputFileName>lib$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.a</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AvrGccProjectExtensions>
+    </AvrGccProjectExtensions>
+    <AssemblyName>AVRCryptoLIB</AssemblyName>
+    <Name>AVRCryptoLIB</Name>
+    <RootNamespace>AVRCryptoLIB</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <ExternalProgrammingToolCommand />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.27.3" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <avrtoolserialnumber />
+    <avrdeviceexpectedsignature>0x1E9608</avrdeviceexpectedsignature>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+        </InterfaceProperties>
+      </ToolOptions>
+      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Simulator</ToolName>
+    </com_atmel_avrdbg_tool_simulator>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega640 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.0.90\gcc\dev\atmega640"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.0.90\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega640 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.0.90\gcc\dev\atmega640"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.0.90\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AES.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_CalInvSbox.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_CALSBOX.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_Dec_commen.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_ENC_COMMEN.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_expandedKey.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_InvSbox.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_Sbox.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SF_128_commen.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SF_128_dec.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SF_128_enc.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SF_192_commen.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SF_192_dec.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SF_192_enc.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SF_256_commen.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SF_256_dec.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SF_256_enc.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SF_InvSubBytesAndXOR.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SF_SubBytes.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SR_128_commen.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SR_128_dec.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SR_128_enc.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SR_192_commen.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SR_192_dec.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SR_192_enc.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SR_256_commen.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SR_256_dec.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SR_256_enc.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SR_InvSubBytesAndXOR.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_SR_SubBytes.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AES_XORBYTES.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AVRCrytolib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="des.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="des_commen.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="des_dec.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DES_DECRYPT.C">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="des_enc.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DES_ENCRYPT.C">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DES_TRIPLE_DECRYPT.C">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DES_TRIPLE_ENCRYPT.C">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="md5.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="md5.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MD5_COMMEN.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MD5_UPDATE.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MD5_UPDATE_P.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="memcmp_P.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="memcmp_P.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="memeor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="memeor.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="rsa.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="rsa_asm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="rsa_dec.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="rsa_decrypt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="rsa_decrypt_P.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="rsa_enc.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="rsa_encrypt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="rsa_encrypt_P.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RSA_MODULO.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RSA_MODULO_P.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="rsa_mul.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sha.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SHA_COMMEN.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SHA_UPDATE.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SHA_UPDATE_P.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SkipJack.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SkipJack_commen.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SkipJack_Dec.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SkipJack_Enc.S">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="macros.inc">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
